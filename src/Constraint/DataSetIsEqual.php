@@ -36,7 +36,6 @@ class DataSetIsEqual extends Constraint
      */
     public function __construct(IDataSet $value)
     {
-        parent::__construct();
         $this->value = $value;
     }
 
@@ -49,7 +48,7 @@ class DataSetIsEqual extends Constraint
     {
         return \sprintf(
             'is equal to expected %s',
-            $this->value->__toString()
+            (string) $this->value
         );
     }
 
